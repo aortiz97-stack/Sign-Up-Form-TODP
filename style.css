@@ -1,12 +1,15 @@
 body{
     display: flex;
+    margin: 0;
 }
 
 #image-container{
-   background-color: red; 
+   background-color: red;
+   height: 100vh;
+   width: 33.3vw; 
 }
 
-#form-descripton{
+#form-description{
     background-color: blue;
 }
 
