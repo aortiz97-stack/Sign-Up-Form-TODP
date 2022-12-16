@@ -1,0 +1,19 @@
+body{
+    display: flex;
+}
+
+#image-container{
+   background-color: red; 
+}
+
+#form-descripton{
+    background-color: blue;
+}
+
+#form{
+    background-color: yellow;
+}
+
+#create-account{
+    background-color: pink;
+}
