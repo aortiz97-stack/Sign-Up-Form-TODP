@@ -20,3 +20,8 @@ body{
 #create-account{
     background-color: pink;
 }
+
+#form-text-container{
+    background-color: green;
+    width: 100%;
+}
