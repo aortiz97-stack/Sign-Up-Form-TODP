@@ -25,3 +25,7 @@ body{
     background-color: green;
     width: 100%;
 }
+
+.text-container{
+    height: 33.3vh;
+}
