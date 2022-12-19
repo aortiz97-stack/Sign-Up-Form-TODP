@@ -86,7 +86,21 @@ button, input{
     font-size: 100%;
 }
 
-.error:focus{ 
+.valid{ 
+    color: green;
+}
 
+.valid:before{
+    position: relative;
+    content: "✔ ";
+}
+
+.invalid{
+    color: red;
+}
+
+.invalid:before{
+    position: relative;
+    content: "✖ ";
 }
 
