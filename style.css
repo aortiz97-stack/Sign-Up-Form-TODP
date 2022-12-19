@@ -43,6 +43,7 @@ body{
     background-color: white;
     display: flex;
     gap: 40px;
+    overflow: auto;
 
 }
 
@@ -85,7 +86,7 @@ button, input{
     font-size: 100%;
 }
 
-.error{
+.error:focus{ 
 
 }
 
