@@ -1,7 +1,7 @@
 const passwordInputs = document.querySelectorAll(".error");
+const formContainer = document.querySelector(".form-container");
 
 function addMessageHTML(e){
-    const formContainer = document.querySelector(".form-container");
     if (e!==undefined){        
         let messageDiv = document.createElement("div");
         let messageOpening = document.createElement("h3");
@@ -18,7 +18,6 @@ function addMessageHTML(e){
             p.id = idList[i];
             messageDiv.appendChild(p);
         }
-
         formContainer.appendChild(messageDiv);   
     }
 }
@@ -28,11 +27,13 @@ function deleteMessageHTML(e){
     formContainer.removeChild(formContainer.lastChild);
 }
 
+
 passwordInputs.forEach((input)=>{
     input.addEventListener("focus", addMessageHTML);
+    input.addEventListener("focus", checkPasswordRequirements);
     input.addEventListener("blur", deleteMessageHTML);
 
-    input.onkeyup = function() {
+    function checkPasswordRequirements(e){
         function invalidToValid(id){
             let message = document.getElementById(id);
             message.classList.remove("invalid");
@@ -72,5 +73,6 @@ passwordInputs.forEach((input)=>{
             validToInvalid("min");
         }
     }
+    input.onkeyup = checkPasswordRequirements
 })
 
