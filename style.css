@@ -41,8 +41,7 @@ body{
 
 .form-container{
     background-color: white;
-    flex-direction: column;
-    justify-content: center;
+
 }
 
 .create-account-container{
@@ -60,13 +59,27 @@ body{
 
 form{
     height: 100%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    
 }
+
+.form-row{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 5px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+
 
 button, input{
     font-family: inherit;
     font-size: 100%;
 }
 
-input{
-    margin-bottom: 10px;
-}
