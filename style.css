@@ -41,6 +41,8 @@ body{
 
 .form-container{
     background-color: white;
+    display: flex;
+    gap: 40px;
 
 }
 
@@ -81,5 +83,9 @@ form{
 button, input{
     font-family: inherit;
     font-size: 100%;
+}
+
+.error{
+
 }
 
