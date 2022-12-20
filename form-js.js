@@ -90,14 +90,6 @@ inputs.forEach((input)=>{
 
 })
 
-/*let button = document.querySelector("button");
-button.addEventListener("click", ()=>{
-    let password = document.getElementById("password");
-    let confirmPassword = document.getElementById("confirm-password");
-
-    if (password !== confirmPassword){
-    }
-});*/
 function addCustomError(id, message){
     let input = document.getElementById(id);
     if (id !=="confirm-password"){
@@ -126,4 +118,12 @@ function addCustomError(id, message){
 }
 
 addCustomError("phone_number", "Please enter a phone number in the format xxx-xxx-xxxx");
-addCustomError("confirm_password", "Please make sure that your passwords match.")
+addCustomError("confirm_password", "Please make sure that your passwords match.");
+
+let submitButton = document.querySelector("button");
+submitButton.addEventListener("mousedown", ()=>{
+    submitButton.style.borderColor = "gray";
+});
+submitButton.addEventListener("mouseup", ()=>{
+    submitButton.style.borderColor = "#200a01";
+});

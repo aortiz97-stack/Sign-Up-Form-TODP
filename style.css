@@ -96,6 +96,13 @@ input{
 
 button{
     margin-top: 20px;
+    background-color: #880808;
+    border-color: #200a01;
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    border-radius: 30%;
 }
 
 .sign-in{
