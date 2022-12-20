@@ -8,3 +8,5 @@ Background Image by <a href="https://pixabay.com/users/chenspec-7784448/?utm_sou
 Password validation code: Credit to w3schools.com, https://www.w3schools.com/howto/howto_js_password_validation.asp
 
 Code for creating custom error input messages: Credit to mozilla.org, https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+
+Font used: Neuzeit S LT Book: https://www.linotype.com/46658/neuzeit-s-lt-book-product.html

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Neuzeit-S-LT-Std-Book;
+    src: url("fonts/Neuzeit\ S\ LT\ Std\ Book.otf");
+}
+
+*{
+    font-family: Neuzeit-S-LT-Std-Book, sans-serif;
+}
+
 body{
     display: flex;
     margin: 0;
@@ -40,6 +49,7 @@ body{
     display: flex;
     align-items: center;
     padding: 15px;
+    padding-top: 25px;
     padding-bottom: 0;
 }
 
