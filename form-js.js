@@ -8,8 +8,9 @@ function addMessageHTML(e){
         messageOpening.textContent = "Password must contain the following:";
         messageDiv.appendChild(messageOpening);
 
-        const messageList = ["A lowercase letter", "A capital (uppercase) letter", "A number", "Minimum of 8 characters"]
-        const idList = ["letter", "capital", "number", "min"]
+        const messageList = ["A lowercase letter", "A capital (uppercase) letter", "A number", "Minimum of 8 characters",
+         "Passwords match"]
+        const idList = ["letter", "capital", "number", "min", "match"]
 
         for (let i = 0; i < messageList.length; i++){
             let p = document.createElement("p");
@@ -74,5 +75,21 @@ passwordInputs.forEach((input)=>{
         }
     }
     input.onkeyup = checkPasswordRequirements
+})
+
+
+const inputs = document.querySelectorAll(".input");
+
+inputs.forEach((input)=>{
+    let box = input.querySelector("input");
+    box.addEventListener("focus", ()=>{
+        box.style.boxShadow = "1px 1px black 1px";
+        box.style.borderColor="blue";
+    })
+    box.addEventListener("blur", ()=> {
+        box.style.boxShadow = "none";
+        box.style.borderColor = "black";
+    })
+
 })
 

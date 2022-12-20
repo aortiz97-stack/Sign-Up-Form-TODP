@@ -86,6 +86,10 @@ button, input{
     font-size: 100%;
 }
 
+input{
+    border-color: black;
+}
+
 .valid{ 
     color: green;
 }
