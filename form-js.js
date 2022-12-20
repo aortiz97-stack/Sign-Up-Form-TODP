@@ -8,9 +8,8 @@ function addMessageHTML(e){
         messageOpening.textContent = "Password must contain the following:";
         messageDiv.appendChild(messageOpening);
 
-        const messageList = ["A lowercase letter", "A capital (uppercase) letter", "A number", "Minimum of 8 characters",
-         "Passwords match"]
-        const idList = ["letter", "capital", "number", "min", "match"]
+        const messageList = ["A lowercase letter", "A capital (uppercase) letter", "A number", "Minimum of 8 characters"]
+        const idList = ["letter", "capital", "number", "min"]
 
         for (let i = 0; i < messageList.length; i++){
             let p = document.createElement("p");
