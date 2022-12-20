@@ -98,14 +98,32 @@ button.addEventListener("click", ()=>{
     if (password !== confirmPassword){
     }
 });*/
-
-let phoneNumber = document.getElementById("phone_number"); 
-phoneNumber.addEventListener("input", (event)=>{
-    if (phoneNumber.validity.patternMismatch){
-        phoneNumber.setCustomValidity("Please enter a phone number in the format xxx-xxx-xxxx");
-        phoneNumber.reportValidity();
+function addCustomError(id, message){
+    let input = document.getElementById(id);
+    if (id !=="confirm-password"){
+        input.addEventListener("input", (event)=>{
+            if (input.validity.patternMismatch){
+                input.setCustomValidity(message);
+                input.reportValidity();
+            }
+            else{
+                input.setCustomValidity("");
+            }
+        });
     }
     else{
-        phoneNumber.setCustomValidity("");
+        input.addEventListener("input", (event)=>{
+            let passwordInput = document.getElementById("password");
+            if (input.textContent !== passwordInput.textContent){
+                input.setCustomValidity(message);
+                input.reportValidity();
+            }
+            else{
+                input.setCustomValidity("");
+            }
+        });
     }
-})
+}
+
+addCustomError("phone_number", "Please enter a phone number in the format xxx-xxx-xxxx");
+addCustomError("confirm_password", "Please make sure that your passwords match.")
