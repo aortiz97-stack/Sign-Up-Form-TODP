@@ -27,7 +27,6 @@ function deleteMessageHTML(e){
     formContainer.removeChild(formContainer.lastChild);
 }
 
-
 passwordInputs.forEach((input)=>{
     input.addEventListener("focus", addMessageHTML);
     input.addEventListener("focus", checkPasswordRequirements);
@@ -78,7 +77,6 @@ passwordInputs.forEach((input)=>{
 
 
 const inputs = document.querySelectorAll(".input");
-
 inputs.forEach((input)=>{
     let box = input.querySelector("input");
     box.addEventListener("focus", ()=>{
@@ -92,3 +90,22 @@ inputs.forEach((input)=>{
 
 })
 
+/*let button = document.querySelector("button");
+button.addEventListener("click", ()=>{
+    let password = document.getElementById("password");
+    let confirmPassword = document.getElementById("confirm-password");
+
+    if (password !== confirmPassword){
+    }
+});*/
+
+let phoneNumber = document.getElementById("phone_number"); 
+phoneNumber.addEventListener("input", (event)=>{
+    if (phoneNumber.validity.patternMismatch){
+        phoneNumber.setCustomValidity("Please enter a phone number in the format xxx-xxx-xxxx");
+        phoneNumber.reportValidity();
+    }
+    else{
+        phoneNumber.setCustomValidity("");
+    }
+})
