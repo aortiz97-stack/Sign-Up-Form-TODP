@@ -90,6 +90,14 @@ input{
     border-color: black;
 }
 
+button{
+    margin-top: 20px;
+}
+
+.sign-in{
+    margin-left: 15px;
+}
+
 .valid{ 
     color: green;
 }
